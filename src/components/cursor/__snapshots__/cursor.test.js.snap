@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cursor char renders as expected 1`] = `"<span class=\\"console-cursor console-cursor--write\\">t</span>"`;
+
+exports[`Cursor classes blink renders as expected 1`] = `"<span class=\\"console-cursor\\"></span>"`;
+
+exports[`Cursor classes element renders as expected 1`] = `"<span class=\\"test-element\\"></span>"`;
+
+exports[`Cursor classes write renders as expected 1`] = `"<span class=\\"console-cursor test-element--write\\">t</span>"`;
+
+exports[`Cursor empty renders as expected 1`] = `"<span class=\\"console-cursor\\"></span>"`;

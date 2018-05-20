@@ -1,0 +1,88 @@
+{
+  "name": "preact-component-console",
+  "version": "0.1.0",
+  "description": "A console emulator for preact.",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test jest --env=jsdom",
+    "tdd": "NODE_ENV=test jest --watch --env=jsdom",
+    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "build": "preact build --no-prerender --clean --template src/index.ejs --service-worker false",
+    "serve": "npm run build && preact serve",
+    "dev": "preact watch --template src/index.ejs"
+  },
+  "keywords": [
+    "preact",
+    "preact-component",
+    "component",
+    "console",
+    "terminal",
+    "emulator",
+    "typewriter"
+  ],
+  "author": {
+    "name": "HP Dietz",
+    "email": "h.p.dietz@gmail.com",
+    "twitter": "@h_p_d"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "identity-obj-proxy": "^3.0.0",
+    "if-env": "^1.0.4",
+    "jest": "^21.2.1",
+    "node-sass": "^4.9.0",
+    "preact-cli": "^2.2.1",
+    "preact-render-spy": "^1.3.0",
+    "preact-render-to-string": "^3.7.0",
+    "preact-widget-scripts": "^0.6.0",
+    "sass-loader": "^6.0.7"
+  },
+  "dependencies": {
+    "deepmerge": "^2.1.0",
+    "preact": "^8.2.9",
+    "preact-compat": "^3.18.0",
+    "preact-habitat": "^3.2.1",
+    "preact-router": "^2.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haensl/preact-component-console.git"
+  },
+  "bugs": {
+    "url": "https://github.com/haensl/preact-component-console/issues"
+  },
+  "homepage": "https://github.com/haensl/preact-component-console#readme",
+  "jest": {
+    "snapshotSerializers": [
+      "preact-render-spy/snapshot"
+    ],
+    "verbose": true,
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|scss|less)$": "identity-obj-proxy",
+      "^react$": "preact-compat",
+      "^react-dom$": "preact-compat"
+    },
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
+  }
+}
