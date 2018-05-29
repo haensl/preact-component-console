@@ -5,8 +5,10 @@ export const DEFAULTS = {
   content: '$'
 };
 
-export default (props) => (
+const PS1 = (props) => (
   <span class={ props.class || DEFAULTS.class }>{
     props.content || DEFAULTS.content
   }</span>
 );
+
+export default PS1;

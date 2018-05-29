@@ -1,0 +1,6 @@
+src/index.ejs
+src/index.js
+preact.config.js
+.babelrc
+.gitignore
+*.test.js

@@ -8,6 +8,8 @@ import array from '../../util/array';
 
 const IS_CLIENT = typeof window === 'object';
 
+export const DEFAULTS = defaults;
+
 export default class Console extends Component {
   constructor() {
     super();
@@ -160,13 +162,15 @@ export default class Console extends Component {
 
   stopWriting() {
     if (IS_CLIENT && this.state.timeouts) {
-      (this.state.timeouts || []).forEach((t) => window.clearTimout(t));
+      (this.state.timeouts || []).forEach((t) => window.clearTimeout(t));
       this.setState({
         timeouts: [],
         console: merge(
           this.state.console,
-          currentLine: null,
-          hasFinishedWritingLines: false
+          {
+            currentLine: null,
+            hasFinishedWritingLines: false
+          }
         )
       });
     }
@@ -184,9 +188,9 @@ export default class Console extends Component {
     return (
       <div class={ state.console.classes.element }>
         { (state.console.lines || []).map((line) => (
-          <Line class={ state.console.classes.line } content={ line } />
+          <Line classes={ state.line.classes } content={ line } />
         ))}
-        <Line class={ state.console.classes.line }
+        <Line classes={ state.line.classes }
           write={ true }
           ps1={
             state.ps1

@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Console empty renders as expected 1`] = `
+"<div class=\\"console\\">
+  <pre class=\\"console-line\\">
+    <span class=\\"console-ps1\\">$</span>
+    <span class=\\"console-line-content\\"></span>
+    <span class=\\"console-cursor\\"></span>
+  </pre>
+</div>
+"
+`;
+
+exports[`Console writing array first line after some time after the whole line has been written renders as expected 1`] = `
+"<div class=\\"console\\">
+  <pre class=\\"console-line\\">
+    <span class=\\"console-ps1\\">$</span>
+    <span class=\\"console-line-content\\">test line.</span>
+    <span class=\\"console-cursor console-cursor--write\\">.</span>
+  </pre>
+</div>
+"
+`;
+
+exports[`Console writing array first line after some time renders as expected 1`] = `
+"<div class=\\"console\\">
+  <pre class=\\"console-line\\">
+    <span class=\\"console-ps1\\">$</span>
+    <span class=\\"console-line-content\\">te</span>
+    <span class=\\"console-cursor console-cursor--write\\">e</span>
+  </pre>
+</div>
+"
+`;
+
+exports[`Console writing array first line renders as expected 1`] = `
+"<div class=\\"console\\">
+  <pre class=\\"console-line\\">
+    <span class=\\"console-ps1\\">$</span>
+    <span class=\\"console-line-content\\">t</span>
+    <span class=\\"console-cursor console-cursor--write\\">t</span>
+  </pre>
+</div>
+"
+`;
+
+exports[`Console writing string after some time after the whole line has been written renders as expected 1`] = `
+"<div class=\\"console\\">
+  <pre class=\\"console-line\\">
+    <span class=\\"console-ps1\\">$</span>
+    <span class=\\"console-line-content\\">test line.</span>
+    <span class=\\"console-cursor console-cursor--write\\">.</span>
+  </pre>
+</div>
+"
+`;
+
+exports[`Console writing string after some time renders as expected 1`] = `
+"<div class=\\"console\\">
+  <pre class=\\"console-line\\">
+    <span class=\\"console-ps1\\">$</span>
+    <span class=\\"console-line-content\\">te</span>
+    <span class=\\"console-cursor console-cursor--write\\">e</span>
+  </pre>
+</div>
+"
+`;
+
+exports[`Console writing string renders as expected 1`] = `
+"<div class=\\"console\\">
+  <pre class=\\"console-line\\">
+    <span class=\\"console-ps1\\">$</span>
+    <span class=\\"console-line-content\\">t</span>
+    <span class=\\"console-cursor console-cursor--write\\">t</span>
+  </pre>
+</div>
+"
+`;

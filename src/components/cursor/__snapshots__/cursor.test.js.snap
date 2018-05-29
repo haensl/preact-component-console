@@ -2,6 +2,20 @@
 
 exports[`Cursor char renders as expected 1`] = `"<span class=\\"console-cursor console-cursor--write\\">t</span>"`;
 
+exports[`Cursor classes blink after the default interval has passed after the default interval has passed another time renders as expected 1`] = `
+"preact-render-spy (1 nodes)
+-------
+<span class=\\"console-cursor\\"></span>
+"
+`;
+
+exports[`Cursor classes blink after the default interval has passed renders as expected 1`] = `
+"preact-render-spy (1 nodes)
+-------
+<span class=\\"console-cursor test-element--blink\\"></span>
+"
+`;
+
 exports[`Cursor classes blink renders as expected 1`] = `"<span class=\\"console-cursor\\"></span>"`;
 
 exports[`Cursor classes element renders as expected 1`] = `"<span class=\\"test-element\\"></span>"`;

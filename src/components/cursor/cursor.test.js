@@ -109,10 +109,39 @@ describe('Cursor', () => {
           tree = component.toString();
         });
 
+        it('renders as expected', () => {
+          expect(tree).toMatchSnapshot();
+        });
+
         it('adds the given blink class', () => {
           expect(tree).toMatch(/test-element--blink"/);
         });
+
+        it('sets the blink state to true', () => {
+          expect(component.state('blink')).toBeTruthy();
+        });
+
+        describe('after the default interval has passed another time', () => {
+          beforeEach(() => {
+            jest.runTimersToTime(DEFAULTS.interval + 1);
+            component.rerender();
+            tree = component.toString();
+          });
+
+          it('removes the given blink class', () => {
+            expect(tree).not.toMatch(/test-element--blink"/);
+          });
+
+          it('sets the blink state to false', () => {
+            expect(component.state('blink')).toBeFalsy();
+          });
+
+          it('renders as expected', () => {
+            expect(tree).toMatchSnapshot();
+          });
+        });
       });
+
     });
 
     describe('write', () => {

@@ -6,9 +6,7 @@ export default {
   console: {
     append: false,
     classes: {
-      element: 'console',
-      line: 'console-line',
-      lineWrite: 'console-line--write'
+      element: 'console'
     },
     typing: {
       char: {
