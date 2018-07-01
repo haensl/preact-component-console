@@ -1,0 +1,19 @@
+.console-cursor {
+  background-color: transparent;
+  position: relative;
+  margin-right: auto;
+}
+
+.console-cursor--write {
+  left: -.6em;
+  color: #fff;
+}
+
+.console-cursor--blink::before {
+  content: "\00a0";
+}
+
+.console-cursor--blink,
+.console-cursor--write {
+  background-color: #000;
+}

@@ -18,7 +18,7 @@ describe('PS1', () => {
     });
 
     it('adds the default class', () => {
-      expect(tree).toMatch(new RegExp(`class="${DEFAULTS.class}"`));
+      expect(tree).toMatch(new RegExp(`class="${DEFAULTS.classes.element}"`));
     });
 
     it('adds the default content', () => {
@@ -38,7 +38,7 @@ describe('PS1', () => {
     });
 
     it('adds the default class', () => {
-      expect(tree).toMatch(new RegExp(`class="${DEFAULTS.class}"`));
+      expect(tree).toMatch(new RegExp(`class="${DEFAULTS.classes.element}"`));
     });
 
     it('adds the content', () => {
@@ -50,7 +50,9 @@ describe('PS1', () => {
     let tree;
 
     beforeEach(() => {
-      tree = render(<PS1 class="testclass" />);
+      tree = render(<PS1 classes={{
+        element: "testclass"
+      }} />);
     });
     
     it('renders as expected', () => {

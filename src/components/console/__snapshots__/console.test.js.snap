@@ -22,6 +22,39 @@ exports[`Console writing array first line after some time after the whole line h
 "
 `;
 
+exports[`Console writing array first line after some time after the whole line has been written second line after some time after the whole line has been written renders as expected 1`] = `
+"<div class=\\"console\\">
+  <pre class=\\"console-line\\">
+    <span class=\\"console-ps1\\">$</span>
+    <span class=\\"console-line-content\\">test line.</span>
+    <span class=\\"console-cursor console-cursor--blink\\"></span>
+  </pre>
+</div>
+"
+`;
+
+exports[`Console writing array first line after some time after the whole line has been written second line after some time renders as expected 1`] = `
+"<div class=\\"console\\">
+  <pre class=\\"console-line\\">
+    <span class=\\"console-ps1\\">$</span>
+    <span class=\\"console-line-content\\">test line.</span>
+    <span class=\\"console-cursor console-cursor--write\\">.</span>
+  </pre>
+</div>
+"
+`;
+
+exports[`Console writing array first line after some time after the whole line has been written second line renders as expected 1`] = `
+"<div class=\\"console\\">
+  <pre class=\\"console-line\\">
+    <span class=\\"console-ps1\\">$</span>
+    <span class=\\"console-line-content\\">test line.</span>
+    <span class=\\"console-cursor console-cursor--write\\">.</span>
+  </pre>
+</div>
+"
+`;
+
 exports[`Console writing array first line after some time renders as expected 1`] = `
 "<div class=\\"console\\">
   <pre class=\\"console-line\\">

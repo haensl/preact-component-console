@@ -8,8 +8,18 @@ describe('math', () => {
   });
 
   describe('randInt', () => {
+    let result;
+    describe('type', () => {
+      beforeEach(() => {
+        result = math.randInt(-10, 10);
+      });
+
+      it('returns a number', () => {
+        expect(typeof result).toEqual('number');
+      });
+    });
+
     describe('bounds', () => {
-      let result;
       beforeEach(() => {
         result = math.randInt(5, 7);
       });

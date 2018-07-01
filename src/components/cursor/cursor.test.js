@@ -104,7 +104,7 @@ describe('Cursor', () => {
           component = shallow(<Cursor classes={{
             blink: 'test-element--blink'
           }} />);
-          jest.runTimersToTime(DEFAULTS.interval + 1);
+          jest.runTimersToTime(DEFAULTS.intervalMs + 1);
           component.rerender();
           tree = component.toString();
         });
@@ -123,7 +123,7 @@ describe('Cursor', () => {
 
         describe('after the default interval has passed another time', () => {
           beforeEach(() => {
-            jest.runTimersToTime(DEFAULTS.interval + 1);
+            jest.runTimersToTime(DEFAULTS.intervalMs + 1);
             component.rerender();
             tree = component.toString();
           });

@@ -1,7 +1,7 @@
 {
   "name": "preact-component-console",
-  "version": "0.1.0",
-  "description": "A console emulator for preact.",
+  "version": "1.0.0",
+  "description": "A console emulator component for preact.",
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test jest --env=jsdom",
@@ -24,7 +24,8 @@
   "author": {
     "name": "HP Dietz",
     "email": "h.p.dietz@gmail.com",
-    "twitter": "@h_p_d"
+    "twitter": "@h_p_d",
+    "url": "https://hpdietz.com"
   },
   "license": "MIT",
   "devDependencies": {
@@ -42,7 +43,7 @@
     "sass-loader": "^6.0.7"
   },
   "dependencies": {
-    "deepmerge": "^2.1.0"
+    "deepmerge": "^2.1.1"
   },
   "peerDependencies": {
     "preact": "^8.2.9"

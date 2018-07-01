@@ -1,0 +1,3 @@
+.console-ps1::after {
+  content: "\00a0";
+}

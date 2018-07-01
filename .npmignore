@@ -4,3 +4,5 @@ preact.config.js
 .babelrc
 .gitignore
 *.test.js
+intro.mov
+intro.gif

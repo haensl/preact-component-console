@@ -1,4 +1,5 @@
 import { h, Component } from 'preact';
+import './cursor.css';
 
 export const DEFAULTS = {
   classes: {
@@ -6,7 +7,7 @@ export const DEFAULTS = {
     element: 'console-cursor',
     write: 'console-cursor--write'
   },
-  interval: 400
+  intervalMs: 400
 };
 
 export default class Cursor extends Component {
@@ -43,12 +44,12 @@ export default class Cursor extends Component {
     if (nextProps.char) {
       this.stopBlinking();
     } else if (this.state.blinkInterval === null) {
-      this.blink(nextProps.interval || DEFAULTS.interval);
+      this.blink(nextProps.intervalMs || DEFAULTS.intervalMs);
     }
   }
 
   componentDidMount() {
-    this.blink(DEFAULTS.interval);
+    this.blink(DEFAULTS.intervalMs);
   }
 
   componentWillUnmount() {

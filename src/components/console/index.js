@@ -41,7 +41,7 @@ export default class Console extends Component {
   consumeLine(line) {
     if (line.length) {
       const c = line.slice(0, 1);
-      return new Promise((resolve, reject) => {
+      return new Promise((resolve) => {
         this.setState({
           console: merge(this.state.console, {
             text: `${this.state.console.text}${c}`
@@ -77,7 +77,7 @@ export default class Console extends Component {
             char: null
           })
         });
-      }).then(() => new Promise((resolve, reject) => {
+      }).then(() => new Promise((resolve) => {
         self.setState({
           timeouts: (self.state.timeouts || []).concat([
             window.setTimeout(() => {
